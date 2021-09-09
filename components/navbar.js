@@ -39,7 +39,7 @@ export default function Navbar() {
                   : textStyle
               }
             >
-              <Link href="/writing">Portfolio</Link>
+              <Link href="/writing">Writing</Link>
             </li>
             <li
               className={
