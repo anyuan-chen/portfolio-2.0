@@ -57,7 +57,9 @@ export default function Navbar() {
                 router.pathname === "/resume" ? highlightedTextStyle : textStyle
               }
             >
-              <Link href="/resume">Resume</Link>
+              <a href="/AndrewChenResume.pdf" download>
+                <h1>Resume</h1>
+              </a>
             </li>
           </div>
         </ul>
