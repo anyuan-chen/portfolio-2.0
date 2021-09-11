@@ -11,7 +11,6 @@ class MyDocument extends Document {
       <Html>
         <Head>
           <link rel="shortcut icon" href="logos.png" />
-          <title>Andrew Chen</title>
         </Head>
         <body>
           <Main />

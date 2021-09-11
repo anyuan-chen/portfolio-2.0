@@ -4,7 +4,7 @@ import Navbar from "../components/navbar";
 
 export default function Contact() {
     const sendToInbox = () => {
-        
+
     }
   return (
     <div className="flex items-center flex-col">
@@ -14,7 +14,7 @@ export default function Contact() {
         <h1 className="pt-4 text-lg">Contact Me</h1>
         <form className="space-y-4" onClick={sendToInbox}>
           <div className="flex flex-col">
-            <label for="name">Name</label>
+            <label htmlFor="name">Name</label>
             <input
               name="name"
               className="border"
@@ -23,7 +23,7 @@ export default function Contact() {
             ></input>
           </div>
           <div className="flex flex-col">
-            <label for="email">Email</label>
+            <label htmlFor="email">Email</label>
             <input
               name="email"
               className="border"
@@ -32,7 +32,7 @@ export default function Contact() {
             ></input>
           </div>
           <div className="flex flex-col">
-            <label for="message">Message</label>
+            <label htmlFor="message">Message</label>
             <textarea
               name="message"
               className="border"
