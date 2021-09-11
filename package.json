@@ -7,6 +7,9 @@
   },
   "dependencies": {
     "gray-matter": "^4.0.3",
+    "katex": "^0.13.18",
+    "marked": "^3.0.3",
+    "marked-katex": "^0.3.8",
     "next": "latest",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
