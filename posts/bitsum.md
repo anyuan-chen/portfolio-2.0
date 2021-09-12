@@ -1,14 +1,12 @@
 ---
-title: Editorial For Bit Sum
+title: Summing Bits
 date: "2021-05-31"
 description: "An intro into bit manipulation techniques."
 tags:
   - competitive
 ---
 
-Bit Sum is a problem found on the online judge Binary Search, avaialable at the link <a href="https://binarysearch.com/problems/Bit-Sum
-<<<<<<< HEAD
-"> here</a>.
+Bit Sum is a problem found on the online judge Binary Search.
 
 In this problem, we're asked to find the lowest possible sum after changing $n$ bits. The first observation that needs to be made is that the further right the bit changed from 0 to 1, the better. No matter the number, changing a bit the furthest right from 0 to 1 will always result in a lower number than changing any other bit from 0 to 1.
 
@@ -18,9 +16,8 @@ Knowing this, the optimal answer to get the least sum should be to take the $n$ 
 
 There are two ways we can do this. Firstly, we can loop through the rightmost-bit for ever number, checking if they are zero. If they are, and we still need to fill more bits, we add $2^n$ to the total where $n$ is the amount of bits the current bit is away from the rightmost bit.
 
-<!-- -->
-
 ```cpp
+
 int solve(vector<int>& nums, int k) {
     int ans = 0;
     const int MOD = 1e9+7;
@@ -38,11 +35,13 @@ int solve(vector<int>& nums, int k) {
     }
     return total%MOD;
 }
+
 ```
 
 The other way in which we can do this is through the usage of a frequency array. For each index of bit, I record the number of zeroes available to be filled. In the second loop, all I do is greedily take the lowest indexes available.
 
 ```cpp
+
 int solve(vector<int>& nums, int k) {
     int answer = 0;
     vector<int> zeroes (32, 0);
@@ -65,6 +64,7 @@ int solve(vector<int>& nums, int k) {
     }
     return answer;
 }
+
 ```
 
 Both of these implementations have a time complexity of $O(N)$, as they loop through the array of numbers once. They also share a space complexity of $O(1)$. There are no additional complex data structures created in the first solution, while the fixed size array in the second solution doesn't add to the space complexity. This was a fun bit manipulation problem to do, and I hope it was for you too!

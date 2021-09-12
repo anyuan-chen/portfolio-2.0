@@ -3,11 +3,8 @@ import fs from "fs";
 import path from "path";
 import * as matter from "gray-matter";
 import Layout from "../../components/layout";
-import marked from "marked";
 import katex from "katex";
-marked.setOptions({
-  kaTex: katex,
-});
+import Markdown from "../../components/markdown";
 
 export default function PostPage({
   frontmatter: { title, date, tags, description },
@@ -16,10 +13,10 @@ export default function PostPage({
 }) {
   return (
     <Layout>
-      <div className="w-page">
-        <h1>{title}</h1>    
-        <h3>{date}</h3>
-        <div dangerouslySetInnerHTML={{ __html: marked(content) }}></div>
+      <div className="w-page pt-4">
+        <h1 className="text-2xl">{title}</h1>
+        <h3 className="font-mono text-gray-500 text-sm pb-2">{date}</h3>
+        <Markdown>{content}</Markdown>
       </div>
     </Layout>
   );

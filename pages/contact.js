@@ -1,4 +1,5 @@
 import React from "react";
+import Footer from "../components/footer";
 import Layout from "../components/layout";
 import Navbar from "../components/navbar";
 
@@ -42,6 +43,7 @@ export default function Contact() {
           <button type="submit" className="border py-2 px-8">Submit</button>
         </form>
       </div>
+      <Footer></Footer>
     </div>
   );
 }

@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Footer from "../components/footer.js";
 import Layout from "../components/layout.js";
 import Navbar from "../components/navbar.js";
 export default function Home() {
@@ -16,6 +17,7 @@ export default function Home() {
           </p>
         </div>
       </div>
+      <Footer></Footer>
     </div>
     
   );

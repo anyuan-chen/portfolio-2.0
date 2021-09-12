@@ -1,4 +1,5 @@
 import React from "react";
+import Footer from "../components/footer";
 import Layout from "../components/layout";
 import Navbar from "../components/navbar";
 import PortfolioItem from "../components/portfolioItem";
@@ -17,6 +18,7 @@ export default function Portfolio() {
           ></PortfolioItem>;
         })}
       </div>
+      <Footer></Footer>
     </div>
   );
 }
