@@ -1,12 +1,13 @@
 import React from "react";
 import Link from "next/link";
 export default function Post(props) {
-  console.log(props);
   let tags;
   if (props.tags) {
     tags = props.tags.map((tag) => {
       return (
-        <button className="mr-4 my-1 px-1 bg-gray-300 rounded">{tag}</button>
+        <Link href={`/writing/tags/${tag}`}>
+          <button className="mr-4 my-1 px-1 bg-gray-300 rounded">{tag}</button>
+        </Link>
       );
     });
   }

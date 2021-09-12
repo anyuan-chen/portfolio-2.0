@@ -3,6 +3,7 @@ import path from "path";
 import fs from "fs";
 import * as matter from "gray-matter";
 import Post from "../../../components/post";
+import Layout from "../../../components/layout";
 export default function Tag({ posts }) {
   const postComponents = posts.map((post) => {
     return (
@@ -15,7 +16,11 @@ export default function Tag({ posts }) {
       ></Post>
     );
   });
-  return <div className="w-page">{postComponents}</div>;
+  return (
+    <Layout>
+      <div className="w-page">{postComponents}</div>
+    </Layout>
+  );
 }
 export async function getStaticPaths() {
   const files = fs.readdirSync(path.join("posts"));
