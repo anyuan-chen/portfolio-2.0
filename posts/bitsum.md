@@ -8,7 +8,7 @@ tags:
 ---
 
 Bit Sum is a problem found on the online judge Binary Search.
-
+    
 In this problem, we're asked to find the lowest possible sum after changing $n$ bits. The first observation that needs to be made is that the further right the bit changed from 0 to 1, the better. No matter the number, changing a bit the furthest right from 0 to 1 will always result in a lower number than changing any other bit from 0 to 1.
 
 We can show this through the number 4. When represented in binary, 4 is 100. If I were to change the bit to the left of the right-most bit from 0 to 1, it would now be 110, which can be written as 6 in decimal form. If I were to change the rightmost bit, it would be 101, which is 5 in decimal form.
