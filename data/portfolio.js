@@ -5,10 +5,10 @@ const portfolio = [
     img: "/catcalendar.png",
   },
   {
-      name: "Competitive Programming",
-      desc: "My solutions to competitive programming problems in C++, involving various data structures and algorithms.     ",
-      img: "/competitive.png"
-  }
+    name: "Competitive Programming",
+    desc: "My solutions to competitive programming problems in C++, involving various data structures and algorithms.     ",
+    img: "/competitive.png",
+  },
 ];
 
 module.exports = portfolio;

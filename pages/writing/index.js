@@ -5,8 +5,9 @@ import * as matter from "gray-matter";
 import Link from "next/link";
 import fs from "fs";
 import Post from "../../components/post";
+import TagDisplay from "../../components/tagDisplay";
 
-export default function Writing({ posts }) {
+export default function Writing({ posts, tags }) {
   const postComponents = posts.map((post) => {
     return (
       <Post
@@ -21,6 +22,10 @@ export default function Writing({ posts }) {
   console.log(posts);
   return (
     <Layout>
+      <div className="py-8 border-b">
+        Collected blog post and writings by me.
+      </div>
+      <TagDisplay tags={tags} />
       <div className="w-page space-y-3 pt-5">{postComponents}</div>
     </Layout>
   );
@@ -37,10 +42,17 @@ export async function getStaticProps() {
       frontmatter,
     };
   });
+  let tagSet = new Set([]);
+  posts.forEach((post) => {
+    post.frontmatter.tags.forEach((tag) => {
+      tagSet.add(tag);
+    });
+  });
   console.log(posts);
   return {
     props: {
       posts: posts,
+      tags: [...tagSet],
     },
   };
 }

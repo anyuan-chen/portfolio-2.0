@@ -4,6 +4,7 @@ import fs from "fs";
 import * as matter from "gray-matter";
 import Post from "../../../components/post";
 import Layout from "../../../components/layout";
+import Link from "next/link";
 export default function Tag({ posts }) {
   const postComponents = posts.map((post) => {
     return (
@@ -18,7 +19,14 @@ export default function Tag({ posts }) {
   });
   return (
     <Layout>
-      <div className="w-page">{postComponents}</div>
+      <div className="w-page space-y-4 pt-2">
+        {postComponents}
+        <div className="border-t">
+          <Link href="/writing">
+            <button className="mt-8 bg-accent px-2 rounded">Back</button>
+          </Link>
+        </div>
+      </div>
     </Layout>
   );
 }

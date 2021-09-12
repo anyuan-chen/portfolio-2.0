@@ -7,6 +7,9 @@ module.exports = {
       width: {
         page: "32vw",
       },
+      colors: {
+        accent: "#c1deda",
+      },
     },
   },
   variants: {
