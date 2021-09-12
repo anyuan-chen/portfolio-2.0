@@ -4,7 +4,6 @@ date: "2021-05-31"
 description: "An intro into bit manipulation techniques."
 tags:
   - competitive
-  - programming
 ---
 
 Bit Sum is a problem found on the online judge Binary Search.

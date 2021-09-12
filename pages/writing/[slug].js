@@ -28,6 +28,7 @@ export async function getStaticPaths() {
       slug: fileName.replace(".md", ""),
     },
   }));
+  //console.log("fuck", paths);
   return {
     paths: paths,
     fallback: false,

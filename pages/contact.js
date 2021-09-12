@@ -4,9 +4,9 @@ import Layout from "../components/layout";
 import Navbar from "../components/navbar";
 
 export default function Contact() {
-    const sendToInbox = () => {
-
-    }
+  const sendToInbox = () => {
+    
+  };
   return (
     <div className="flex items-center flex-col">
       <Navbar></Navbar>
@@ -18,7 +18,7 @@ export default function Contact() {
             <label htmlFor="name">Name</label>
             <input
               name="name"
-              className="border"
+              className="border p-1 rounded"
               type="text"
               placeholder="first last"
             ></input>
@@ -27,7 +27,7 @@ export default function Contact() {
             <label htmlFor="email">Email</label>
             <input
               name="email"
-              className="border"
+              className="border p-1 rounded"
               type="text"
               placeholder="example@domain.com"
             ></input>
@@ -36,11 +36,13 @@ export default function Contact() {
             <label htmlFor="message">Message</label>
             <textarea
               name="message"
-              className="border"
+              className="border p-1 rounded"
               placeholder="type something here"
             ></textarea>
           </div>
-          <button type="submit" className="border py-2 px-8">Submit</button>
+          <button type="submit" className="border py-2 px-8">
+            Submit
+          </button>
         </form>
       </div>
       <Footer></Footer>
