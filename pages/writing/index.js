@@ -9,23 +9,23 @@ import TagDisplay from "../../components/tagDisplay";
 import Search from "../../components/search";
 
 export default function Writing({ posts, tags }) {
-  const postComponents = posts.map((post) => {
-    return (
-      <Post
-        title={post.frontmatter.title}
-        description={post.frontmatter.description}
-        date={post.frontmatter.date}
-        tags={post.frontmatter.tags}
-        slug={post.slug}
-      ></Post>
-    );
-  });
-  console.log(posts);
+  // const postComponents = posts.map((post) => {
+    // return (
+    //   <Post
+    //     title={post.frontmatter.title}
+    //     description={post.frontmatter.description}
+    //     date={post.frontmatter.date}
+    //     tags={post.frontmatter.tags}
+    //     slug={post.slug}
+    //   ></Post>
+    // );
+  // });
+  // console.log(posts);
   return (
     <Layout>
       
       <TagDisplay tags={tags} />
-      <Search posts={postComponents}></Search>
+      <Search posts={posts}></Search>
     </Layout>
   );
 }
