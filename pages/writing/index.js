@@ -6,6 +6,7 @@ import Link from "next/link";
 import fs from "fs";
 import Post from "../../components/post";
 import TagDisplay from "../../components/tagDisplay";
+import Search from "../../components/search";
 
 export default function Writing({ posts, tags }) {
   const postComponents = posts.map((post) => {
@@ -22,11 +23,9 @@ export default function Writing({ posts, tags }) {
   console.log(posts);
   return (
     <Layout>
-      <div className="py-8 border-b">
-        Collected blog post and writings by me.
-      </div>
+      
       <TagDisplay tags={tags} />
-      <div className="w-page space-y-3 pt-5">{postComponents}</div>
+      <Search posts={postComponents}></Search>
     </Layout>
   );
 }
