@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Post from "./post";
 export default function Search(props) {
   const [curPosts, setCurPosts] = useState(props.posts);
@@ -17,6 +17,18 @@ export default function Search(props) {
     })
   );
   useEffect(() => {
+    setCurPosts(
+      props.posts.filter((post) => {
+        if (post.frontmatter.title.toLowerCase().includes(userInput)) {
+          return true;
+        }
+        //console.log(userInput);
+        return false;
+      })
+    );
+  }, [userInput]);
+
+  useEffect(() => {
     setPostComponents(
       curPosts.map((post) => {
         return (
@@ -31,18 +43,11 @@ export default function Search(props) {
       })
     );
   }, [curPosts]);
-  
+
   const changeInput = (event) => {
     setUserInput(event.target.value);
-    setCurPosts(
-      props.posts.filter((post) => {
-        if (post.frontmatter.title.includes(userInput)) {
-          return true;
-        }
-        return false;
-      })
-    );
   };
+
   return (
     <div>
       <input
@@ -51,7 +56,7 @@ export default function Search(props) {
         value={userInput}
         onChange={changeInput}
       ></input>
-      <div className="w-page space-y-3 pt-5">{} </div>
+      <div className="w-page space-y-3 pt-5">{postComponents} </div>
     </div>
   );
 }
